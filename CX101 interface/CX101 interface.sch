@@ -1,0 +1,342 @@
+EESchema Schematic File Version 4
+LIBS:CX101 interface-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "CX101 DPM Interface"
+Date "2021-03-01"
+Rev "A"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x13_Female J2
+U 1 1 604B0868
+P 6200 3100
+F 0 "J2" H 6228 3080 50  0000 L CNN
+F 1 "Conn_01x13_Female" H 6228 3035 50  0001 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm" H 6200 3100 50  0001 C CNN
+F 3 "~" H 6200 3100 50  0001 C CNN
+	1    6200 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3500 5350 3500
+Wire Wire Line
+	5350 3500 5350 3700
+Connection ~ 5350 3700
+Wire Wire Line
+	5350 3700 5350 3900
+$Comp
+L power:+5V #PWR03
+U 1 1 604BB769
+P 5150 3500
+F 0 "#PWR03" H 5150 3350 50  0001 C CNN
+F 1 "+5V" V 5165 3628 50  0000 L CNN
+F 2 "" H 5150 3500 50  0001 C CNN
+F 3 "" H 5150 3500 50  0001 C CNN
+	1    5150 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5350 3500 5150 3500
+Connection ~ 5350 3500
+Text Notes 5340 4165 0    50   ~ 0
+\nConnect to VCC to turn on\ndcimal point.
+Wire Wire Line
+	5950 3400 6000 3400
+Wire Wire Line
+	6000 3300 5950 3300
+Wire Wire Line
+	5950 3300 5950 3400
+$Comp
+L power:GND #PWR04
+U 1 1 6050549C
+P 5750 2600
+F 0 "#PWR04" H 5750 2350 50  0001 C CNN
+F 1 "GND" V 5755 2472 50  0000 R CNN
+F 2 "" H 5750 2600 50  0001 C CNN
+F 3 "" H 5750 2600 50  0001 C CNN
+	1    5750 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6000 2600 5850 2600
+NoConn ~ 6000 2700
+NoConn ~ 6000 2800
+$Comp
+L power:+5V #PWR01
+U 1 1 6050DA82
+P 3650 2900
+F 0 "#PWR01" H 3650 2750 50  0001 C CNN
+F 1 "+5V" V 3665 3028 50  0000 L CNN
+F 2 "" H 3650 2900 50  0001 C CNN
+F 3 "" H 3650 2900 50  0001 C CNN
+	1    3650 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6000 3600 5900 3600
+Wire Wire Line
+	5900 3600 5900 3700
+Wire Wire Line
+	5450 3700 5350 3700
+Wire Wire Line
+	5900 3700 5750 3700
+Wire Wire Line
+	5350 3900 5450 3900
+Wire Wire Line
+	5950 3900 5750 3900
+Wire Wire Line
+	6000 3700 5950 3700
+Wire Wire Line
+	5950 3700 5950 3900
+Wire Wire Line
+	6000 3500 5750 3500
+Wire Wire Line
+	6000 2900 5950 2900
+Wire Wire Line
+	5950 2900 5950 3200
+Wire Wire Line
+	5950 3200 6000 3200
+Wire Wire Line
+	6000 3000 5850 3000
+Wire Wire Line
+	5850 3000 5850 2600
+Connection ~ 5850 2600
+Wire Wire Line
+	5850 2600 5750 2600
+$Comp
+L Device:R_US R1
+U 1 1 60570EE2
+P 4200 3100
+F 0 "R1" V 3995 3100 50  0000 C CNN
+F 1 "1M" V 4086 3100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4240 3090 50  0001 C CNN
+F 3 "~" H 4200 3100 50  0001 C CNN
+	1    4200 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4450 3100 4350 3100
+Wire Wire Line
+	6000 3100 4450 3100
+Connection ~ 4450 3100
+$Comp
+L power:+5V #PWR05
+U 1 1 60588652
+P 5950 2500
+F 0 "#PWR05" H 5950 2350 50  0001 C CNN
+F 1 "+5V" V 5965 2628 50  0000 L CNN
+F 2 "" H 5950 2500 50  0001 C CNN
+F 3 "" H 5950 2500 50  0001 C CNN
+	1    5950 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6000 2500 5950 2500
+$Comp
+L Jumper:SolderJumper_2_Open JP3
+U 1 1 605B5075
+P 5600 3500
+F 0 "JP3" H 5600 3580 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 5600 3614 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 5600 3500 50  0001 C CNN
+F 3 "~" H 5600 3500 50  0001 C CNN
+	1    5600 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP4
+U 1 1 605B7C6E
+P 5600 3700
+F 0 "JP4" H 5600 3780 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 5600 3814 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 5600 3700 50  0001 C CNN
+F 3 "~" H 5600 3700 50  0001 C CNN
+	1    5600 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP5
+U 1 1 605B862B
+P 5600 3900
+F 0 "JP5" H 5600 3980 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 5600 4014 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 5600 3900 50  0001 C CNN
+F 3 "~" H 5600 3900 50  0001 C CNN
+	1    5600 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 605BE28A
+P 4700 2750
+F 0 "R2" V 4550 2750 50  0000 C CNN
+F 1 "110k" V 4620 2750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4740 2740 50  0001 C CNN
+F 3 "~" H 4700 2750 50  0001 C CNN
+	1    4700 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 2750 4450 2750
+Wire Wire Line
+	4450 2750 4450 3000
+Connection ~ 4450 3000
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 605C2460
+P 5100 2750
+F 0 "JP1" H 5100 2830 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 5100 2864 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 5100 2750 50  0001 C CNN
+F 3 "~" H 5100 2750 50  0001 C CNN
+	1    5100 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 605C349C
+P 5100 3000
+F 0 "JP2" H 5100 3080 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 5100 3114 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 5100 3000 50  0001 C CNN
+F 3 "~" H 5100 3000 50  0001 C CNN
+	1    5100 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 605166C7
+P 3650 3000
+F 0 "#PWR02" H 3650 2750 50  0001 C CNN
+F 1 "GND" V 3655 2872 50  0000 R CNN
+F 2 "" H 3650 3000 50  0001 C CNN
+F 3 "" H 3650 3000 50  0001 C CNN
+	1    3650 3000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4050 3100 3550 3100
+Wire Wire Line
+	3650 3000 3550 3000
+Wire Wire Line
+	3650 2900 3550 2900
+Wire Wire Line
+	5350 3000 5850 3000
+Connection ~ 5850 3000
+Wire Wire Line
+	5250 3000 5350 3000
+Wire Wire Line
+	5250 2750 5350 2750
+Wire Wire Line
+	5350 2750 5350 3000
+Connection ~ 5350 3000
+$Comp
+L Device:R_US R3
+U 1 1 60604DF3
+P 4700 3000
+F 0 "R3" V 4550 3000 50  0000 C CNN
+F 1 "10k" V 4620 3000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4740 2990 50  0001 C CNN
+F 3 "~" H 4700 3000 50  0001 C CNN
+	1    4700 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 3000 4450 3000
+Wire Wire Line
+	4450 3000 4450 3100
+Text Notes 4525 2525 0    50   ~ 0
+Range selection
+Wire Wire Line
+	4850 3000 4950 3000
+Wire Wire Line
+	4850 2750 4950 2750
+$Comp
+L Device:C C1
+U 1 1 6063D9A5
+P 3500 4150
+F 0 "C1" H 3615 4196 50  0000 L CNN
+F 1 "1u" H 3615 4105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3538 4000 50  0001 C CNN
+F 3 "~" H 3500 4150 50  0001 C CNN
+	1    3500 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR06
+U 1 1 60641016
+P 3500 3900
+F 0 "#PWR06" H 3500 3750 50  0001 C CNN
+F 1 "+5V" V 3515 4028 50  0000 L CNN
+F 2 "" H 3500 3900 50  0001 C CNN
+F 3 "" H 3500 3900 50  0001 C CNN
+	1    3500 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 60641CEE
+P 3500 4400
+F 0 "#PWR07" H 3500 4150 50  0001 C CNN
+F 1 "GND" V 3505 4272 50  0000 R CNN
+F 2 "" H 3500 4400 50  0001 C CNN
+F 3 "" H 3500 4400 50  0001 C CNN
+	1    3500 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4400 3500 4350
+Wire Wire Line
+	3500 3900 3500 3950
+$Comp
+L Connector:Conn_01x03_Male J1
+U 1 1 605022F5
+P 3350 3000
+F 0 "J1" H 3385 3180 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 3458 3190 50  0001 C CNN
+F 2 "Connect:Fan_Pin_Header_Straight_1x03" H 3350 3000 50  0001 C CNN
+F 3 "~" H 3350 3000 50  0001 C CNN
+	1    3350 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 6065D2C5
+P 3450 3950
+F 0 "#FLG0101" H 3450 4025 50  0001 C CNN
+F 1 "PWR_FLAG" V 3450 4077 50  0000 L CNN
+F 2 "" H 3450 3950 50  0001 C CNN
+F 3 "~" H 3450 3950 50  0001 C CNN
+	1    3450 3950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3450 3950 3500 3950
+Connection ~ 3500 3950
+Wire Wire Line
+	3500 3950 3500 4000
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 6065F0D3
+P 3450 4350
+F 0 "#FLG0102" H 3450 4425 50  0001 C CNN
+F 1 "PWR_FLAG" V 3450 4477 50  0000 L CNN
+F 2 "" H 3450 4350 50  0001 C CNN
+F 3 "~" H 3450 4350 50  0001 C CNN
+	1    3450 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3450 4350 3500 4350
+Connection ~ 3500 4350
+Wire Wire Line
+	3500 4350 3500 4300
+$EndSCHEMATC
